@@ -222,7 +222,7 @@ public class SmallMethods {
 				result = result + middle + "\n";
 			}
 			if (i == size - 1) {
-				result = result + topAndBottom;
+				result = result + topAndBottom + "\n";
 			}
 		}
 		return result;
@@ -373,9 +373,9 @@ public class SmallMethods {
 		String makeSquareTest2 = makeSquare(num2);
 		String makeSquareTest3 = makeSquare(num3);
 		System.out.println("Testing makeSquare()");
-		System.out.println("makeSquare() method returned \n" + makeSquareTest1 + "\non test input: " + num1);
-		System.out.println("makeSquare() method returned \n" + makeSquareTest2 + "\non test input: " + num2);
-		System.out.println("makeSquare() method returned \n" + makeSquareTest3 + "\non test input: " + num3);
+		System.out.println("makeSquare() method returned \n" + makeSquareTest1 + "on test input: " + num1);
+		System.out.println("makeSquare() method returned \n" + makeSquareTest2 + "on test input: " + num2);
+		System.out.println("makeSquare() method returned \n" + makeSquareTest3 + "on test input: " + num3);
 		System.out.println();
 	}
 }
