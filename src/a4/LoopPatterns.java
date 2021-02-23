@@ -4,8 +4,8 @@ import java.awt.Color;
 import java.util.Scanner;
 
 /**
- * @author wiese This class contains three different methods that utilize
- *         optimization loops.
+ * @author wiese This class contains different methods that utilize optimization
+ *         loops.
  *
  *         The first method, lowestAlphabetically(), will return the lowest
  *         String found in an array of Strings by lexicographical comparison of
@@ -16,6 +16,14 @@ import java.util.Scanner;
  * 
  *         The third method, curvedScores(), returns and int[] of scores that
  *         curves the input by 10.
+ * 
+ *         In addition, there are four methods that allow user to make a
+ *         modified version of an image by making it grey, negative, brighter,
+ *         or merging two images together.
+ * 
+ *         The main method runs program that will adjust an image according to
+ *         user input. It allows the user to choose how the image is modified
+ *         and then shows them the image.
  */
 public class LoopPatterns {
 	/**
@@ -215,18 +223,18 @@ public class LoopPatterns {
 		System.out.println("What effect would you like to apply?\n" + "Valid options (do not include the quotes) are\n"
 				+ "\"greyscale\", \"negative\", \"brighter\", \"addcat\":");
 		String option = input.next();
-		if(option.equals("greyscale")) {
+		if (option.equals("greyscale")) {
 			Picture greyImage = makeGrey(sourceImage);
 			greyImage.show();
 		} else if (option.equals("negative")) {
 			Picture negativeImage = makeNegative(sourceImage);
 			negativeImage.show();
-		} else if(option.equals("brighter")) {
+		} else if (option.equals("brighter")) {
 			System.out.println("Enter a number multiplier to adjust brightness.");
 			Double multiplier = input.nextDouble();
 			Picture brighterPic = makeBrighter(sourceImage, multiplier);
 			brighterPic.show();
-		} else if(option.equals("addcat")) {
+		} else if (option.equals("addcat")) {
 			Picture addCatImage = mergeImages(sourceImage, greenScreenImage);
 			addCatImage.show();
 		} else {
