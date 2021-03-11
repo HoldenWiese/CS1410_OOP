@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
  * @author wiese
  *
  *         These are tests written to test different methods that utilize
- *         optimization loops.
+ *         optimization loops..
  */
 class LoopPatternsTest {
 
