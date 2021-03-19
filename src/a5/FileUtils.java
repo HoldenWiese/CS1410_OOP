@@ -65,12 +65,12 @@ public class FileUtils {
 				for (File f : dir) {
 					File fileLatest = findLatestFile(f);
 					if (fileLatest != null) {
-						if(fileLatest.lastModified() > compare.lastModified() || compare.isDirectory()){
-							compare = fileLatest;	
+						if (fileLatest.lastModified() > compare.lastModified() || compare.isDirectory()) {
+							compare = fileLatest;
 						}
 					}
 				}
-				if(compare.isDirectory()) {
+				if (compare.isDirectory()) {
 					return null;
 				} else {
 					return compare;

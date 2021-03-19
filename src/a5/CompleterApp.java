@@ -11,8 +11,8 @@ import java.util.Scanner;
 import javax.swing.*;
 
 /**
- * This program acts as a text completion program for cities. This
- * class creates a non-blocking text entry JLabel.
+ * This program acts as a text completion program for cities. This class creates
+ * a non-blocking text entry JLabel.
  * 
  * @author Prof. David E. Johnson
  *
@@ -22,13 +22,12 @@ public class CompleterApp {
 	private JFrame frame;
 
 	/**
-	 * Make a window with non-blocking typing. Reads in a file, then
-	 * tries to match typed letters with the elements of the file and
-	 * displays any match.
+	 * Make a window with non-blocking typing. Reads in a file, then tries to match
+	 * typed letters with the elements of the file and displays any match.
 	 * 
 	 * @param filePathAndName the location of the cities file.
-	 * @param searchStyle "binary" or "sequential" to use that style search.
-	 * @param makeBig if true, makes the array 2000x bigger.
+	 * @param searchStyle     "binary" or "sequential" to use that style search.
+	 * @param makeBig         if true, makes the array 2000x bigger.
 	 */
 	public CompleterApp(String filePathAndName, String searchStyle, boolean makeBig) {
 		// No code here should be changed for the assignment!
@@ -43,7 +42,7 @@ public class CompleterApp {
 		// Binary search depends on a sorted array.
 		Arrays.sort(cities);
 		if (makeBig) {
-			String[] bigCities = new String[cities.length*2000];
+			String[] bigCities = new String[cities.length * 2000];
 			int bigIndex = 0;
 			for (String city : cities) {
 				for (int repeat = 0; repeat < 2000; repeat++) {
@@ -93,16 +92,16 @@ public class CompleterApp {
 						char letter = e.getKeyChar();
 						typed = typed + letter;
 					}
-					
+
 					textBox.setText(typed);
 					if (typed.length() > 0) {
 						int index = -1;
 
 						// Try the search method based on the style sent in.
-							if (searchStyle.equals("binary"))
-								index = Completer.binarySearchForKey(sortedText, typed);
-							else
-								index = Completer.sequentialSearchForKey(sortedText, typed);
+						if (searchStyle.equals("binary"))
+							index = Completer.binarySearchForKey(sortedText, typed);
+						else
+							index = Completer.sequentialSearchForKey(sortedText, typed);
 						String suggestedText;
 						if (index == -1) {
 							suggestedText = typed + " No match!";
@@ -124,8 +123,8 @@ public class CompleterApp {
 		});
 
 	}
-	
+
 	public void start() {
-		frame.setVisible(true);		
+		frame.setVisible(true);
 	}
 }

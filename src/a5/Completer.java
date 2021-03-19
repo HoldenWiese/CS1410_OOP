@@ -38,8 +38,8 @@ public class Completer {
 
 		int citiesCount = scan.nextInt();
 		String[] citiesArr = new String[citiesCount];
-		
-		//skip the first line with the number of cities.
+
+		// skip the first line with the number of cities.
 		scan.nextLine();
 
 		for (int i = 0; i < citiesCount; i++) {
@@ -67,7 +67,7 @@ public class Completer {
 	public static int binarySearchForKey(String[] cities, String key) {
 		int low = 0;
 		int high = cities.length - 1;
-		
+
 		while (low <= high) {
 			int middle = low + (high - low) / 2;
 
@@ -124,7 +124,7 @@ public class Completer {
 		boolean makeBig = false;
 		CompleterApp app = new CompleterApp("src/a5/cities.txt", "binary", makeBig);
 		app.start();
-		
+
 	}
 
 }
